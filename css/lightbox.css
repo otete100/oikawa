@@ -1,0 +1,81 @@
+.illust figure{
+	margin: 0;
+	display: none;
+}
+
+.illust figure:target{
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100vh;
+	z-index: 100;
+	background: rgba(0, 0, 0, 0.6);
+	overflow-y: auto;
+}
+
+.illust figure:target .overlay{
+	position: absolute; 
+	top: 0;   
+	left: 0;
+	width: 100%;
+	min-height: 100vh;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	color: #fff;
+	animation: fadein .3s;
+}
+
+#close{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 1px;
+	height: 1px;
+}
+
+.illust figure:target div.img{
+	max-height: 90vh;
+	max-width: 90vw;
+}
+
+.illust figure:target .overlay > *{
+	margin: 3rem 3rem 0;
+}
+
+.illust figure:target .overlay > *:last-child{
+	margin-bottom: 3rem;
+}
+
+@keyframes fadein{
+	0%{
+		transform: scale(0.2);
+		opacity: 0.2;
+	}
+	100%{
+		transform: scale(1);
+	opacity: 1;
+	}
+}
+
+body:has(figure:target){
+	overflow: hidden;
+}
+
+.illust figure:target::-webkit-scrollbar {
+   width: 0.8em;
+}
+
+/*スクロールバー*/
+.illust figure:target::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+.illust figure:target::-webkit-scrollbar-thumb {
+  background-color: #000;
+}

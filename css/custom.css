@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+/* ↓Googleフォント読み込み */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;800&display=swap&subset=japanese');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+
+:root {
+	--color-base: #fbf6f2; /* 背景色などのベージュの部分 */
+	--color-main: #E47362; /* 赤い部分 */
+	--color-accent: #afcbd0; /* 緑の部分 */
+	--color-text: #333; /* 文字の色 */
+	--color-marker: #ffeeaa; /* 文字のマーカー部分の色 */
+	--color-light: #fff;
+	--font-primary: 'Noto Sans JP', Meiryo, メイリオ, sans-serif; /* 日本語フォント */
+	--font-alphanumeric: 'Outfit', sans-serif; /* 英数フォント */
+	--font-icon: 'Font Awesome 6 Free'; /* アイコンフォント */
+}
+
+@media screen and (min-width: 1367px) {
+	html{ font-size:62.5%;}}
+@media screen and (max-width: 1366px) {
+	html{ font-size:50%;}}
+@media screen and (max-width: 800px) {
+	html{ font-size:90%;}}
+@media screen and (max-width: 500px) {
+	html{ font-size:62.5%;}}
+
+@media screen and (min-width: 769px) {
+	:root {
+		--margin-base: 5rem;
+		--border-radius: 0.5rem;
+	}
+
+	body{
+		font-size: 1.5rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	:root {
+		--margin-base: 3rem;
+		--border-radius: 0.3rem;
+	}
+
+	body{
+		font-size: 1.2rem;
+	}
+}
